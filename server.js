@@ -1,9 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const userRoutes = require('./routes/api/userRoutes');
 const thoughtRoutes = require('./routes/api/thoughtRoutes');
 
-// Initialize the Express app
+// Load environment variables from .env file
+dotenv.config();
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -15,8 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/users', userRoutes);
 app.use('/api/thoughts', thoughtRoutes);
 
-// Connect to MongoDB database
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/socialnetwork', {
+// Connect to MongoDB using the URI from the .env file
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

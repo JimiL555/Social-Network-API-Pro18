@@ -1,0 +1,13 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+
+# Environment Variables
+.env
+
+# Logs
+logs
+*.log
+
+# Optional cache
+.DS_Store  # MacOS system file
