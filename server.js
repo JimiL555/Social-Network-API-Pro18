@@ -19,10 +19,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/thoughts', thoughtRoutes);
 
 // Connect to MongoDB using the URI from the .env file
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/socialnetwork');
 
 // Enable debug mode to log MongoDB queries in the terminal
 mongoose.set('debug', true);
