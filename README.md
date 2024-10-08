@@ -112,7 +112,9 @@ User Routes
 
 ## Walkthrough Video
 
-Click here to watch the walkthrough video! 
+Click here to watch the walkthrough video!
+
+    https://youtu.be/8Kp-B164WQo
 
 The walkthrough video demonstrates:
 
